@@ -1,0 +1,339 @@
+{
+    "intents": [
+        {
+            "tag": "saudacoes",
+            "patterns": [
+                "Oi",
+                "Como voce esta?",
+                "Tem alguem ai?",
+                "Ola",
+                "Bom dia",
+                "Salve",
+                "Boa tarde",
+                "Boa noite",
+                "fala fi",
+                "qual e a boa"
+            ],
+            "responses": [
+                "Ola!",
+                "Bom te ver de novo!",
+                "Ola, como posso ajudar?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "Tchau",
+                "Falou",
+                "Adeus",
+                "Estou saindo",
+                "Nao me procure mais seu degenerado",
+                "Embora",
+                "estou indo embora"
+            ],
+            "responses": [
+                "Triste te ver ir :(",
+                "Ate mais tarde!",
+                "Tchau!",
+                "Obrigado por vir!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "idade",
+            "patterns": [
+                "idade",
+                "qual e a sua idade?",
+                "idade?",
+                "quantos anos voce tem?"
+            ],
+            "responses": [
+                "Eu tenho 1 semana de idade",
+                "1 semana!",
+                "Nao tenho mais que uma semana! Nao sei direito, ja estou fazendo esse trabalho faz anos..."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "nome",
+            "patterns": [
+                "qual seu nome?",
+                "como devo te chamar?",
+                "voce tem nome?"
+            ],
+            "responses": [
+                "Me chame de exterminador do futuro",
+                "Arnold Schwarzenegger"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "vendas",
+            "patterns": [
+                "gostaria de comprar algo",
+                "O que voce recomenda?",
+                "O que tem para comprar?",
+                "O que voce vende?"
+            ],
+            "responses": [
+                "Nos vendemos pizza!",
+                "Pizza!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "horas",
+            "patterns": [
+                "Quando voces estao abertos?",
+                "Quando abrem?",
+                "Abertos?"
+            ],
+            "responses": [
+                "Nos estamos abertos sempre das 11:00 as 14:00 e 18:30 as 23:30! Todos os dias.."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "cardapio",
+            "patterns": [
+                "Qual e o cardapio",
+                "Qual o menu",
+                "Quais os sabores da pizza",
+                "Qual sabor",
+                "Quero uma pizza",
+                "Qual pizza tem",
+                "Cardapio"
+            ],
+            "responses": [
+                " AMERICANA - MUSSARELA, BACON, CALABRESA, OVOS E CEBOLA \n MILHO - MUSSARELA E MILHO \n ESCAROLA - ESCAROLA, BACON, ALHO E MUSSARELA \n PORTUGUESA - PRESUNTO, MUSSARELA, OVOS, CEBOLA"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pedido",
+            "patterns": [
+                "Gostaria de fazer um pedido",
+                "quero pedir",
+                "gostaria de pedir uma pizza",
+                "posso fazer o pedido",
+                "pedido"
+            ],
+            "responses": [
+                "Ok! Pode falar...",
+                "Pedido? Pode fazer!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pedido-americana",
+            "patterns": [
+                "quero uma americana",
+                "gostaria de uma pizza americana",
+                "americana",
+                "americana, por favor",
+                "meia americana",
+                "americana",
+                "mais uma de americana",
+                "mais meia americana"
+            ],
+            "responses": [
+                "Ok, Americana!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pedido-escarola",
+            "patterns": [
+                "quero uma escarola",
+                "mais uma de escarola",
+                "mais meia escarola",
+                "gostaria de uma pizza escarola",
+                "escarola",
+                "escarola, por favor",
+                "meia escarola",
+                "escarola"
+            ],
+            "responses": [
+                "Ok, Escarola! Algo mais?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pedido-milho",
+            "patterns": [
+                "quero uma milho",
+                "gostaria de uma pizza milho",
+                "milho",
+                "milho, por favor",
+                "meia milho",
+                "milho",
+                "mais uma de milho",
+                "mais meia milho"
+            ],
+            "responses": [
+                "Ok, Milho!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pedido-portuguesa",
+            "patterns": [
+                "quero uma portuguesa",
+                "gostaria de uma pizza portuguesa",
+                "portuguesa",
+                "portuguesa, por favor",
+                "meia portuguesa",
+                "portuguesa",
+                "mais uma de portuguesa",
+                "mais meia portuguesa"
+            ],
+            "responses": [
+                "Ok, portuguesa!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "endereco",
+            "patterns": [
+                "Qual e o endereco?",
+                "Endereco",
+                "Rua",
+                "Bairro",
+                "onde ficam?",
+                "onde voces ficam?",
+                "ficam em curitiba?",
+                "onde"
+            ],
+            "responses": [
+                "Nossa pizzaria fica na rua das Flores, 800, bairro Plantas Verdes. Em Curitiba"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "reserva",
+            "patterns": [
+                "Preciso reservar mesa?",
+                "Reserva",
+                "Devo reservar?",
+                "Reserva",
+                "Gostaria de fazer uma reserva",
+                "e necessario fazer reserva",
+                "preciso fazer reserva"
+            ],
+            "responses": [
+                "Nossa pizzaria eh bem movimentada, mas nao eh necessario fazer reserva!",
+                "Nao eh necessario fazer reserva!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "telefone",
+            "patterns": [
+                "qual e o telefone",
+                "quero falar com uma pessoa de verdade",
+                "gostaria de falar com alguem",
+                "telefone",
+                "qual o numero de telefone",
+                "qual o numero de celular",
+                "celular",
+                "voce tem um numero de celular",
+                "numero de celular"
+            ],
+            "responses": [
+                "Se voce prefere falar com uma pessoa real, ligue (41)3332-9801",
+                "(41)3332-9801, o nosso telefone"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "pagamento",
+            "patterns": [
+                "pagamento",
+                "como efetuo o pagamento",
+                "como pago",
+                "pagar",
+                "gostaria de pagar",
+                "dinheiro",
+                "como pago a conta",
+                "quero pagar"
+            ],
+            "responses": [
+                "Voce ira efetuar o pagamento na entrega da pizza! \nAceitamos:\nCartao de credito/debito\nDinheiro"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "troco",
+            "patterns": [
+                "preciso de troco para",
+                "vou precisar de troco",
+                "troco",
+                "quero troco"
+            ],
+            "responses": [
+                "Troco informado!",
+                "Beleza, troco!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "tempo",
+            "patterns": [
+                "quanto tempo demora",
+                "demora",
+                "demora muito",
+                "quanto tempo ira demorar",
+                "esta demorando"
+            ],
+            "responses": [
+                "Nossas pizzas demoram cerca de 40 minutos para chegarem ate a sua casa!"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "preco",
+            "patterns": [
+                "quanto custa",
+                "qual o preco",
+                "quanto custa a pizza pequena",
+                "quanto custa a pizza grande",
+                "quanto custa a pizza media",
+                "preco",
+                "quanto deu?",
+                "quais tamanhos",
+                "qual tamanho tem",
+                "quais sao os tamanhos"
+            ],
+            "responses": [
+                "Nossas pizzas custam:\ngrande - RS40\nmedia - RS30\npequena - RS20"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "caro",
+            "patterns": [
+                "muito caro",
+                "nossa nao tenho dinheiro",
+                "nao consigo pagar",
+                "meu deus que caro"
+            ],
+            "responses": [
+                "Entao trabalhe para pagar :)"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "doce",
+            "patterns": [
+                "tem pizza doce",
+                "pizza doce",
+                "gostaria de uma pizza doce"
+            ],
+            "responses": [
+                "Nao temos pizza doce :("
+            ],
+            "context_set": ""
+        }
+    ]
+}
