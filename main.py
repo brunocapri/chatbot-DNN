@@ -17,11 +17,11 @@ with open("intents.json") as file:
 print(data["intents"])
 
 # tentar abrir as variaveis salvas:
-#try:
-    #with open("data.pickle", "rb") as f:
-        #words, labels, training, output = pickle.load(f)
-#except:
-words  = []
+# try:
+# with open("data.pickle", "rb") as f:
+#words, labels, training, output = pickle.load(f)
+# except:
+words = []
 labels = []
 docs_x = []
 docs_y = []
@@ -82,9 +82,9 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-#try:
-    #model.load("model.tflearn")
-#except:
+# try:
+# model.load("model.tflearn")
+# except:
 model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
 model.save("model.tflearn")
 
@@ -106,7 +106,7 @@ def chat():
     print("Comece a falar com o bot")
     while True:
         inp = input("Voce > ")
-        if inp.lower in "sair":
+        if inp.lower == "sair":
             break
 
         results = model.predict([bag_of_words(inp, words)])
