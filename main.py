@@ -23,8 +23,8 @@ print(data["intents"])
 # except:
 words = []
 labels = []
-docs_x = []
-docs_y = []
+docs_x = []  # listas de todos os patterns
+docs_y = []  # a tag de qual cada pattern faz parte
 
 for intent in data["intents"]:
     for pattern in intent["patterns"]:
@@ -37,15 +37,15 @@ for intent in data["intents"]:
     if intent["tag"] not in labels:
         labels.append(intent["tag"])
 
-# removendo as palavras duplicadas e colocando tudo em minusculo
+# aplicando a stemizacao
 words = [stemmer.stem(w.lower()) for w in words]
 
 words = sorted(list(set(words)))
 labels = sorted(labels)
 
 training = []
-output = []
-
+output = []  # lista do bow a ser preenchida
+# iniciado com 0 em todas as posicoes da lista
 out_empty = [0 for _ in range(len(labels))]
 
 for x, doc in enumerate(docs_x):
@@ -57,7 +57,7 @@ for x, doc in enumerate(docs_x):
             bag.append(1)
         else:
             bag.append(0)
-    # copiando
+
     output_row = out_empty[:]
     output_row[labels.index(docs_y[x])] = 1
 
@@ -67,8 +67,8 @@ for x, doc in enumerate(docs_x):
 training = np.array(training)
 output = np.array(output)
 # salvando as variaveis para nao ter que executar tudo de novo
-with open("data.pickle", "wb") as f:
-    pickle.dump((words, labels, training, output), f)
+# with open("data.pickle", "wb") as f:
+#pickle.dump((words, labels, training, output), f)
 
 tf.reset_default_graph()
 
@@ -82,9 +82,6 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-# try:
-# model.load("model.tflearn")
-# except:
 model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
 model.save("model.tflearn")
 
@@ -112,7 +109,7 @@ def chat():
         results = model.predict([bag_of_words(inp, words)])
         results_index = np.argmax(results)
         tag = labels[results_index]
-        # print(tag)
+
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
